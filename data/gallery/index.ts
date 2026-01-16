@@ -10,7 +10,7 @@ import { data as kowloon } from './kowloon';
 export const galleryItems: GalleryItem[] = [
   shibuya,
   barbican,
-  alexanderplatz,
+  Nepalslope,
   marinaCity,
   highLine,
   kowloon,
