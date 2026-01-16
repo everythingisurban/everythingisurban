@@ -1,0 +1,33 @@
+
+export interface Book {
+  id: string;
+  title: string;
+  author: string;
+  year: string;
+  reflection: string;
+  cover?: string;
+  tags: string[];
+}
+
+export interface UpdateCardProps {
+  id: string;
+  category: string;
+  title: string;
+  date: string;
+  description: string;
+  link?: string;
+  tags?: string[];
+}
+
+export interface GalleryItem {
+  id: string;
+  src: string;
+  title: string;
+  location: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  description: string;
+  date: string;
+}
