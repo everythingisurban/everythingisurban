@@ -3,7 +3,7 @@ import { UpdateCardProps } from '../../types';
 export const data: UpdateCardProps = {
   id: "w01",
   category: "THEORY",
-  title: "The Aesthetics of Raw Data",
+  title: "What ails heritage reconstruction?",
   date: "2024.02.15",
   description: "The 2015 great earthquakes had a major impact on cultural heritage. Hundreds of monuments, including palaces, temples, monasteries, chaityas, bahals, sattals and patis collapsed and many were badly damaged. According to the preliminary report of Department of Archaeology (DOA), the earthquake had affected as many as 745 monuments in 20 districts. UNESCO world heritage sites—three Durbar Squares of Kathmandu, Patan and Bhaktapur, Swayambhunath, Boudhanath, Pashupatinath and Changu Narayan—also suffered damage.
 
