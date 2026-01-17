@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Marquee: React.FC = () => {
-  const items = ["CODING", "ARCHITECTURE", "RESEARCH", "URBANIZATION", "ENTROPY", "DESIGN"];
+  const items = ["URBANISM", "ARCHITECTURE", "RESEARCH", "DATA", "JUSTICE", "DESIGN"];
 
   return (
     <div className="relative flex overflow-hidden border-y border-black/20 dark:border-white/20 bg-urban-white dark:bg-urban-white text-urban-black dark:text-urban-black py-6 select-none">
