@@ -10,7 +10,6 @@ import { data as responsiveUrbanism } from './responsive-urbanism';
 import { data as decentralizedBlock } from './decentralized-block';
 
 export const writings: UpdateCardProps[] = [
-  aestheticsRawData,
   brutalistWeb,
   urbanComputing,
   gridNetwork,
