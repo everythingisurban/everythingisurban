@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect66
+              } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, X, ArrowDown, ExternalLink } from 'lucide-react';
 import { galleryItems } from '../data/gallery/index';
@@ -60,9 +61,38 @@ const MapModal: React.FC<{ item: GalleryItem; onClose: () => void }> = ({ item, 
   </motion.div>
 );
 
-const Gallery: React.FC = () => {
+2
+  = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+
+      // Enhanced close handler to clear hover states
+  const handleCloseModal = () => {
+    // Blur any focused elements
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    // Force remove any stuck pseudo-classes by triggering reflow
+    document.body.offsetHeight;
+    
+    setSelectedItem(null);
+  };
+
+  // Disable body scroll and clean up hover states when modal is open
+  useEffect(() => {
+    if (selectedItem) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.pointerEvents = 'auto';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.pointerEvents = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.pointerEvents = '';
+    };
+  }, [selectedItem]);
     
     // 2 rows of 3 = 6 items
     const displayedItems = isExpanded ? galleryItems : galleryItems.slice(0, 6);
@@ -84,7 +114,8 @@ const Gallery: React.FC = () => {
                 )}
              </div>
 
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             <div className="112
+               md:grid-cols-2 lg:grid-cols-3 gap-6 ${selectedItem ? 'pointer-events-none' : ''}">>
                 <AnimatePresence mode="popLayout">
                     {displayedItems.map((item, i) => (
                         <motion.div
@@ -123,8 +154,8 @@ const Gallery: React.FC = () => {
 
              <AnimatePresence>
                 {selectedItem && (
-                   <MapModal item={selectedItem} onClose={() => setSelectedItem(null)} />
-                )}
+                   155
+        <MapModal item={selectedItem} onClose={handleCloseModal} />                )}
              </AnimatePresence>
         </section>
     )
