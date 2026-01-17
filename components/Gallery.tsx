@@ -61,8 +61,7 @@ const MapModal: React.FC<{ item: GalleryItem; onClose: () => void }> = ({ item, 
   </motion.div>
 );
 
-2
-  = () => {
+const Gallery: React.FC  = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
@@ -114,8 +113,7 @@ const MapModal: React.FC<{ item: GalleryItem; onClose: () => void }> = ({ item, 
                 )}
              </div>
 
-             <div className="112
-               md:grid-cols-2 lg:grid-cols-3 gap-6 ${selectedItem ? 'pointer-events-none' : ''}">>
+             <div className="grid                md:grid-cols-2 lg:grid-cols-3 gap-6 ${selectedItem ? 'pointer-events-none' : ''}">>
                 <AnimatePresence mode="popLayout">
                     {displayedItems.map((item, i) => (
                         <motion.div
@@ -154,7 +152,6 @@ const MapModal: React.FC<{ item: GalleryItem; onClose: () => void }> = ({ item, 
 
              <AnimatePresence>
                 {selectedItem && (
-                   155
         <MapModal item={selectedItem} onClose={handleCloseModal} />                )}
              </AnimatePresence>
         </section>
