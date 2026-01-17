@@ -1,5 +1,4 @@
 import { UpdateCardProps } from '../../types';
-import { data as aestheticsRawData } from './aesthetics-raw-data';
 import { data as brutalistWeb } from './brutalist-web';
 import { data as urbanComputing } from './urban-computing';
 import { data as gridNetwork } from './grid-network';
